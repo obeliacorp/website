@@ -1,6 +1,102 @@
 /* Стили для header */
 
 /* --- Кнопка Request a demo --- */
+
+/* --- Бургер-меню --- */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1201;
+  background: none;
+  border: none;
+}
+.burger span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background: #4536d1;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.burger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .burger {
+    display: flex;
+  }
+  .main-nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    background: #fff;
+    box-shadow: 0 12px 32px 0 rgba(60,60,130,0.12);
+    border-radius: 0 0 18px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0 18px 0;
+    gap: 0;
+    transform: translateY(-200%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(.7,.2,.3,1);
+    z-index: 1200;
+  }
+  .main-nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    align-items: flex-start;
+  }
+  .main-nav li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .main-nav a {
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 18px;
+    border-radius: 0;
+    color: #4536d1;
+    border-bottom: 1px solid #ece9fa;
+  }
+  .main-nav a:last-child {
+    border-bottom: none;
+  }
+  .products-submenu {
+    position: static;
+    box-shadow: none;
+    min-width: 0;
+    width: 100%;
+    border-radius: 0 0 18px 18px;
+    padding: 10px 0;
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+    background: #f9f9fb;
+  }
+}
+
 .header-actions .request-demo-btn {
     background: linear-gradient(100deg, #814BF6, #6255F6) !important;
     color: #fff !important;
