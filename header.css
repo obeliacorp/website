@@ -1,0 +1,205 @@
+/* Стили для header */
+
+/* --- Кнопка Request a demo --- */
+.header-actions .request-demo-btn {
+    background: linear-gradient(100deg, #814BF6, #6255F6) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(98, 85, 246, 0.35) !important;
+    padding: 12px 28px !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    border: 1px solid transparent !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+}
+.header-actions .request-demo-btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(98, 85, 246, 0.45) !important;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+
+
+/* --- Подменю Products --- */
+.products-menu {
+  position: relative;
+}
+.products-submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px 0 rgba(60,60,130,0.18), 0 4px 18px 0 rgba(80,80,120,0.13);
+  /* Усилена тень */
+  padding: 32px 36px 28px 36px;
+  min-width: 780px;
+  z-index: 2000;
+  transition: opacity 0.25s, transform 0.25s;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+.products-menu:hover .products-submenu,
+.products-menu:focus-within .products-submenu {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.submenu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
+  gap: 36px 48px;
+}
+.submenu-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+.submenu-title {
+  font-weight: 600;
+  font-size: 17px;
+  color: #4536d1;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  transition: color 0.18s, background 0.18s;
+  border-radius: 8px;
+  padding: 2px 0 2px 0;
+}
+.submenu-title:hover, .submenu-title:focus {
+  color: #2d1e8b;
+  background: #f2f1fc;
+  text-decoration: none;
+}
+.emoji {
+  font-size: 1.2em;
+  margin-right: 4px;
+}
+.submenu-link {
+  font-size: 16px;
+  color: #2d2d2d;
+  text-decoration: none;
+  margin-bottom: 7px;
+  padding: 7px 0 7px 0;
+  border-radius: 7px;
+  transition: color 0.18s, background 0.18s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid #ece9fa;
+}
+.submenu-link:last-child {
+  border-bottom: none;
+}
+.submenu-link:hover, .submenu-link:focus {
+  background: #f2f1fc;
+  color: #4536d1;
+}
+@media (max-width: 950px) {
+  .products-submenu {
+    min-width: 95vw;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    padding: 20px 10px 16px 10px;
+  }
+  .submenu-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 10px;
+  }
+  .submenu-col {
+    min-width: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .products-submenu {
+    min-width: 100vw;
+    left: 0;
+    border-radius: 0 0 18px 18px;
+    padding: 10px 2vw 10px 2vw;
+  }
+  .submenu-grid {
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+  }
+}
+
+
+.submenu-viewall-plain {
+  display: block;
+  margin-top: 28px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* --- Шапка и Навигация --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9fb;
+    padding: 0 24px;
+    border-radius: 20px;
+    box-shadow:
+        0 16px 34px rgba(0, 0, 0, 0.07),
+        inset 0 1px 2px rgba(255, 255, 255, 0.2),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(25, 25, 25, 0.1);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1140px;
+    z-index: 1000;
+    height: 70px;
+    backdrop-filter: blur(8px);
+}
+
+.logo a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+    height: 100%;
+    padding: 0 8px;
+}
+
+.main-nav a:hover {
+    color: #484848;
+}
+
+.main-nav .fa-chevron-down { 
+    font-size: 10px;
+    margin-left: 4px;
+}

@@ -1,0 +1,45 @@
+/* Стили для popup-модального окна */
+/* === Popup Modal Styles (Reusable) === */
+.iframe-popup-overlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(36, 34, 54, 0.45);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+.iframe-popup-overlay.active {
+    display: flex;
+}
+.iframe-popup-modal {
+    background: transparent;
+    border-radius: 14px;
+    box-shadow: 0 8px 36px rgba(0,0,0,0.18);
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iframe-popup-frame {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    transition: none;
+}
+@media (max-width: 600px) {
+  .iframe-popup-frame {
+    width: 98vw;
+    height: 95vh;
+  }
+}
