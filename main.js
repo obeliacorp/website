@@ -3,16 +3,22 @@ document.addEventListener('DOMContentLoaded', function() {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.main-nav');
   if (burger && nav) {
-    burger.addEventListener('click', function() {
+    burger.addEventListener('click', function(e) {
+      e.stopPropagation();
       nav.classList.toggle('active');
+      burger.classList.toggle('active');
     });
     document.addEventListener('click', function(e) {
       if (!nav.contains(e.target) && !burger.contains(e.target)) {
         nav.classList.remove('active');
+        burger.classList.remove('active');
       }
     });
     nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => nav.classList.remove('active'));
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        burger.classList.remove('active');
+      });
     });
   }
   // === OPEN POPUP ON "Get Free AI" BUTTON ===
