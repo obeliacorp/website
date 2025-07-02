@@ -246,3 +246,25 @@ body {
     background: none;
     pointer-events: none;
   }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.35rem; line-height: 1.14; }
+    h2 { font-size: 1.08rem; line-height: 1.16; }
+    h3 { font-size: 0.98rem; line-height: 1.13; }
+    h4 { font-size: 0.92rem; line-height: 1.12; }
+    .section-cta-animate .cta-text,
+    .testimonials-title,
+    .aiagent-promo-title { font-size: 0.99rem; }
+    .logos-marquee-section { padding: 20px 0; }
+    .main-header { padding: 0 8px; height: 54px; min-height: 54px; max-width: 100vw; }
+    .main-nav { padding: 16px 0 8px 0 !important; }
+    .templates-section { padding: 8px 0 12px 0; }
+    .testimonials-title,
+    .aiagent-promo-title { font-size: 1.02rem; }
+    .footer { padding: 18px 0 12px 0; font-size: 0.97rem; }
+    .hero-section, .scale-section, .cases-section, .solutions-section, .faqs-section {
+      padding-left: 4vw; padding-right: 4vw;
+    }
+    body, html { overflow-x: hidden; padding: 0; margin: 0; }
+    .site-background { display: none; }
+  }

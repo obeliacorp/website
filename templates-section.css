@@ -95,6 +95,66 @@
 
 @media (max-width: 900px) {
   .templates-section {
+    padding: 12px 0 18px 0;
+  }
+  .templates-section h2 {
+    font-size: 1.28rem;
+  }
+  .templates-scroll {
+    gap: 10px;
+    padding-bottom: 4px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .template-card {
+    min-width: 88vw;
+    max-width: 92vw;
+    padding: 12px 8px 12px 10px;
+    font-size: 0.98rem;
+  }
+  .template-card-title {
+    font-size: 1rem;
+  }
+  .template-card-desc {
+    font-size: 0.93rem;
+  }
+  .template-card-emoji {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .templates-section {
+    padding: 4px 0 8px 0;
+  }
+  .templates-section h2 {
+    font-size: 1.02rem;
+  }
+  .templates-scroll {
+    gap: 6px;
+    padding-bottom: 2px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .template-card {
+    min-width: 96vw;
+    max-width: 98vw;
+    padding: 8px 2vw 8px 2vw;
+    font-size: 0.94rem;
+  }
+  .template-card-title {
+    font-size: 0.99rem;
+  }
+  .template-card-desc {
+    font-size: 0.89rem;
+  }
+  .template-card-emoji {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+}
+  .templates-section {
     padding: 16px 0 24px 0;
   }
   .templates-section h2 {
@@ -118,7 +178,7 @@
   .template-card-emoji {
     font-size: 1.6rem;
   }
-}
+
 @media (max-width: 600px) {
   .templates-section {
     padding: 8px 0 14px 0;
