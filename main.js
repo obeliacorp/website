@@ -2,24 +2,55 @@ document.addEventListener('DOMContentLoaded', function() {
   // === BURGER MENU ===
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.main-nav');
-  if (burger && nav) {
+  const overlay = document.querySelector('.side-menu-overlay');
+  if (burger && nav && overlay) {
     burger.addEventListener('click', function(e) {
       e.stopPropagation();
       nav.classList.toggle('active');
       burger.classList.toggle('active');
+      overlay.style.display = nav.classList.contains('active') ? 'block' : 'none';
+      setTimeout(() => {
+        overlay.style.opacity = nav.classList.contains('active') ? '1' : '0';
+      }, 10);
     });
-    document.addEventListener('click', function(e) {
-      if (!nav.contains(e.target) && !burger.contains(e.target)) {
+    overlay.addEventListener('click', function() {
+      nav.classList.remove('active');
+      burger.classList.remove('active');
+      overlay.style.opacity = '0';
+      setTimeout(() => {
+        overlay.style.display = 'none';
+      }, 300);
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
         nav.classList.remove('active');
         burger.classList.remove('active');
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+          overlay.style.display = 'none';
+        }, 300);
       }
     });
-    nav.querySelectorAll('a').forEach(link => {
+    nav.querySelectorAll('a:not(.products-toggle)').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('active');
         burger.classList.remove('active');
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+          overlay.style.display = 'none';
+        }, 300);
       });
     });
+    // Аккордеон для Products
+    const productsMenu = nav.querySelector('.products-menu');
+    const productsToggle = nav.querySelector('.products-toggle');
+    if (productsMenu && productsToggle) {
+      productsToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        productsMenu.classList.toggle('open');
+      });
+    }
   }
   // === OPEN POPUP ON "Get Free AI" BUTTON ===
   var promoBtn = document.querySelector('.aiagent-promo-btn-primary');

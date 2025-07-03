@@ -1,3 +1,96 @@
+/* Стили для бокового меню и overlay */
+.side-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 23, 60, 0.38);
+  z-index: 1199;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+.main-nav.side-menu.active ~ .side-menu-overlay,
+.side-menu.active ~ .side-menu-overlay {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+.main-nav.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 82vw;
+  max-width: 370px;
+  background: #fff;
+  box-shadow: -4px 0 32px 0 rgba(60,60,130,0.13);
+  border-radius: 0 0 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 0 24px 0;
+  gap: 0;
+  transform: translateX(110%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(.7,.2,.3,1);
+  z-index: 1200;
+}
+.main-nav.side-menu.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.menu-demo-btn {
+  display: block;
+  width: calc(100% - 48px);
+  margin: 22px auto 0 auto;
+  background: #814BF6;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  font-size: 19px;
+  font-weight: 600;
+  padding: 15px 0;
+  cursor: pointer;
+  box-shadow: 0 4px 16px 0 rgba(129,75,246,0.08);
+  transition: background 0.2s;
+}
+.menu-demo-btn:hover {
+  background: #4536d1;
+}
+.products-menu .products-submenu {
+  display: none;
+  background: #f8f7fd;
+  box-shadow: none;
+  position: static;
+  padding: 0 0 0 16px;
+  border-radius: 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+.products-menu.open .products-submenu {
+  display: block;
+  max-height: 600px;
+  transition: max-height 0.3s;
+}
+.products-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.products-toggle i {
+  margin-left: 8px;
+  transition: transform 0.3s;
+}
+.products-menu.open .products-toggle i {
+  transform: rotate(180deg);
+}
+
 /* Стили для header */
 
 /* --- Кнопка Request a demo --- */
