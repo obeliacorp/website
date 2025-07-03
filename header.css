@@ -59,6 +59,24 @@
 .menu-demo-btn:hover {
   background: #4536d1;
 }
+.close-menu {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #4536d1;
+  z-index: 1300;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.close-menu:hover {
+  color: #814BF6;
+}
+
 .products-menu .products-submenu {
   display: none;
   background: #f8f7fd;
@@ -70,6 +88,18 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s;
+}
+@media (max-width: 900px) {
+  .products-menu .products-submenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 1201;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 8px 24px 0 rgba(60,60,130,0.09);
+    margin-top: 0;
+  }
 }
 .products-menu.open .products-submenu {
   display: block;

@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.main-nav');
   const overlay = document.querySelector('.side-menu-overlay');
-  if (burger && nav && overlay) {
+  const closeBtn = document.querySelector('.close-menu');
+  if (burger && nav && overlay && closeBtn) {
     burger.addEventListener('click', function(e) {
       e.stopPropagation();
       nav.classList.toggle('active');
@@ -40,6 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
           overlay.style.display = 'none';
         }, 300);
       });
+    });
+    // Кнопка закрытия меню (крестик)
+    closeBtn.addEventListener('click', function() {
+      nav.classList.remove('active');
+      overlay.style.opacity = '0';
+      setTimeout(() => {
+        overlay.style.display = 'none';
+      }, 300);
     });
     // Аккордеон для Products
     const productsMenu = nav.querySelector('.products-menu');
