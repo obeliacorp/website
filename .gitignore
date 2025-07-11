@@ -1,0 +1,36 @@
+# Python/Flask backend
+.env
+*.db
+__pycache__/
+*.pyc
+instance/
+
+# Google API credentials
+credentials.json
+
+# Node/npm (if any frontend build is added)
+node_modules/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# VSCode/IDE
+.vscode/
+.idea/
+
+# Misc
+*.bak
+*.swp
+
+# Ignore local test files
+/test_*
+
+# Do not ignore static assets and templates
+!static/
+!templates/

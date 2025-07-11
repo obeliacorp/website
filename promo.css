@@ -1,0 +1,219 @@
+/* Стили для промо-блока AI Agent Promo */
+
+.aiagent-promo-section {
+  background: #f8fafc;
+  padding: 70px 0 70px 0;
+}
+
+.aiagent-promo {
+  background: #fff;
+  border-radius: 28px;
+  margin: 0 auto;
+  padding: 70px 0 60px 0;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(129,75,246,0.10), 0 1.5px 6px rgba(80,80,120,0.04);
+  max-width: 1050px;
+  overflow: visible;
+  text-align: center;
+}
+
+/* Новые позиции звёзд */
+.aiagent-promo-star[data-pos="tl"],
+.aiagent-promo-star[data-pos="tr"],
+.aiagent-promo-star[data-pos="bl"],
+.aiagent-promo-star[data-pos="br"],
+.aiagent-promo-star[data-pos="tc"],
+.aiagent-promo-star[data-pos="bc"],
+.aiagent-promo-star[data-pos="cl"],
+.aiagent-promo-star[data-pos="cr"],
+.aiagent-promo-star[data-pos="c"] {
+  opacity: 0.18;
+}
+.aiagent-promo-star[data-pos="tc"] { top: 18px; left: 50%; transform: translateX(-50%); }
+.aiagent-promo-star[data-pos="bc"] { bottom: 18px; left: 50%; transform: translateX(-50%); }
+.aiagent-promo-star[data-pos="cl"] { top: 50%; left: 24px; transform: translateY(-50%); }
+.aiagent-promo-star[data-pos="cr"] { top: 50%; right: 24px; transform: translateY(-50%); }
+.aiagent-promo-star[data-pos="c"] { top: 50%; left: 50%; transform: translate(-50%,-50%); }
+
+/* Сделать звёзды очень светлыми */
+.aiagent-promo-star {
+  color: #4536d1;
+}
+
+
+.aiagent-promo-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.aiagent-promo-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #232323;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.aiagent-promo-highlight {
+  color: #7c6af5;
+  background: linear-gradient(90deg, #ede9fe 60%, #fff 100%);
+  border-radius: 7px;
+  padding: 2px 7px;
+}
+
+.brand-color {
+  color: #4536d1;
+}
+
+.aiagent-promo-desc {
+  color: #64748b;
+  font-size: 1.13rem;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.aiagent-promo-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.aiagent-promo-btn {
+  display: inline-block;
+  padding: 13px 32px;
+  border-radius: 999px;
+  font-size: 1.09rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  box-shadow: 0 2px 10px 0 rgba(129, 75, 246, 0.07);
+}
+
+.aiagent-promo-btn-primary {
+  background: linear-gradient(90deg, #814BF6, #6255F6);
+  color: #fff;
+  border: none;
+}
+
+.aiagent-promo-btn-primary:hover {
+  background: linear-gradient(90deg, #6255F6, #814BF6);
+}
+
+.aiagent-promo-btn-secondary {
+  background: #fff;
+  color: #7c6af5;
+  border: 2px solid #7c6af5;
+}
+
+.aiagent-promo-btn-secondary:hover {
+  background: #f4f3ff;
+}
+
+.aiagent-promo-star {
+  position: absolute;
+  color: #4536d1;
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(0.5px);
+  transition: opacity 0.2s;
+  animation: star-float 7s ease-in-out infinite;
+}
+
+/* Индивидуальные задержки и направления для разных позиций */
+.aiagent-promo-star[data-pos="tl"] { animation-delay: 0s; }
+.aiagent-promo-star[data-pos="tr"] { animation-delay: 1.5s; animation-direction: reverse; }
+.aiagent-promo-star[data-pos="cl"] { animation-delay: 0.8s; }
+.aiagent-promo-star[data-pos="cr"] { animation-delay: 2.2s; animation-direction: reverse; }
+.aiagent-promo-star[data-pos="c"] { animation-delay: 3.5s; }
+.aiagent-promo-star[data-pos="l20t20"] { animation-delay: 2.9s; }
+.aiagent-promo-star[data-pos="l80t20"] { animation-delay: 1.2s; }
+.aiagent-promo-star[data-pos="l20b80"] { animation-delay: 4.1s; animation-direction: reverse; }
+.aiagent-promo-star[data-pos="l80b80"] { animation-delay: 2.7s; }
+
+@keyframes star-float {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); }
+  25%  { transform: translateY(-6px) rotate(-3deg) scale(1.03); }
+  50%  { transform: translateY(0) rotate(2deg) scale(1); }
+  75%  { transform: translateY(7px) rotate(3deg) scale(0.97); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+/* Для мелких звёздочек, если появятся */
+.aiagent-promo-star--sm {
+  animation: star-float-sm 4.2s ease-in-out infinite;
+}
+@keyframes star-float-sm {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); }
+  20%  { transform: translateY(-9px) rotate(-6deg) scale(1.08); }
+  50%  { transform: translateY(0) rotate(3deg) scale(0.92); }
+  80%  { transform: translateY(8px) rotate(7deg) scale(1.04); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+/* Новые позиции для дополнительных звёзд */
+.aiagent-promo-star[data-pos="l20t20"] { left: 20%; top: 20%; }
+.aiagent-promo-star[data-pos="l80t20"] { left: 80%; top: 20%; }
+.aiagent-promo-star[data-pos="l20b80"] { left: 20%; top: 80%; }
+.aiagent-promo-star[data-pos="l80b80"] { left: 80%; top: 80%; }
+
+.aiagent-promo-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* Градиентная подложка для выделенного текста */
+.aiagent-promo-highlight {
+  display: inline-block;
+  background: transparent;
+  border-radius: 7px;
+  padding: 2px 7px;
+  color: #000000;
+  font-weight: 800;
+  position: relative;
+}
+@media (max-width: 900px) {
+  .aiagent-promo-section { padding: 36px 0; }
+  .aiagent-promo { padding: 36px 0 30px 0; border-radius: 14px; }
+  .aiagent-promo-title { font-size: 1.5rem; }
+  .aiagent-promo-inner { padding: 0 3vw; }
+}
+
+/* Позиционирование крупных звезд */
+.aiagent-promo-star[data-pos="tl"] { top: 22px; left: 32px; }
+.aiagent-promo-star[data-pos="tr"] { top: 22px; right: 32px; }
+.aiagent-promo-star[data-pos="bl"] { bottom: 22px; left: 48px; }
+.aiagent-promo-star[data-pos="br"] { bottom: 22px; right: 48px; }
+
+/* Мелкие звезды */
+.aiagent-promo-star--sm {
+  opacity: 0.5;
+  width: 18px;
+  height: 18px;
+}
+.aiagent-promo-star--sm[data-pos="tcm"] { top: 18px; left: 50%; transform: translateX(-50%); }
+.aiagent-promo-star--sm[data-pos="tr2"] { top: 50px; right: 110px; }
+.aiagent-promo-star--sm[data-pos="tl2"] { top: 80px; left: 90px; }
+.aiagent-promo-star--sm[data-pos="bl2"] { bottom: 32px; left: 160px; }
+.aiagent-promo-star--sm[data-pos="br2"] { bottom: 32px; right: 130px; }
+.aiagent-promo-star--sm[data-pos="ml"] { top: 50%; left: 36px; transform: translateY(-50%); }
+aiagent-promo-star--sm[data-pos="mr"] { top: 60%; right: 36px; transform: translateY(-50%); }
+
+@media (max-width: 900px) {
+  .aiagent-promo {
+    padding: 44px 0 36px 0;
+    border-radius: 14px;
+  }
+  .aiagent-promo-title {
+    font-size: 1.5rem;
+  }
+  .aiagent-promo-inner {
+    padding: 0 3vw;
+  }
+}

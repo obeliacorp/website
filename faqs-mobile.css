@@ -1,0 +1,78 @@
+/* Mobile-specific overrides for FAQs section */
+
+/* Place after faqs.css */
+
+@media (max-width: 768px) {
+    .faq-bg {
+        padding: 50px 0 40px 0;
+    }
+
+    .faq-section {
+        padding: 32px 24px;
+        margin: 40px auto 32px;
+    }
+
+    .faq-section h2 {
+        font-size: 30px;
+        margin-bottom: 14px;
+    }
+
+    .faq-section p {
+        font-size: 16px;
+        margin-bottom: 28px;
+    }
+
+    .faq-item {
+        padding: 20px 18px;
+    }
+
+    .faq-question {
+        font-size: 1.05rem;
+    }
+
+    .faq-answer {
+        font-size: 0.95rem;
+    }
+
+    .faq-toggle,
+    .faq-toggle-icon {
+        font-size: 1.4rem;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+    .faq-bg {
+        padding: 36px 0 30px 0;
+    }
+
+    .faq-section {
+        padding: 26px 16px;
+        margin: 32px auto 24px;
+    }
+
+    .faq-section h2 {
+        font-size: 24px;
+    }
+
+    .faq-section p {
+        font-size: 15px;
+    }
+
+    .faq-item {
+        padding: 18px 14px;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+
+    .faq-toggle,
+    .faq-toggle-icon {
+        font-size: 1.3rem;
+    }
+}

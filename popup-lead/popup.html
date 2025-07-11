@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Free AI-assistant</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="popup-inner.css">
+
+</head>
+<body>
+  <div class="popup-iframe-wrapper">
+  <div class="popup-iframe-content">
+    <button class="popup-close-btn" id="popup-close-btn" type="button">&times;</button>
+  <h3 class="popup-title"><span>Get Free</span> AI-assistant</h3>
+<h3 class="popup-subtitle">Fill out the form and we’ll send you<br> a template tailored for your business.</br></h3>
+  <form id="popup-form">
+  <label for="popup-name">Name</label>
+  <input type="text" id="popup-name" name="name" required>
+  <label for="popup-email">Email</label>
+  <input type="email" id="popup-email" name="email" required>
+  <label for="popup-business">Business Niche</label>
+  <select id="popup-business" name="business" required>
+    <option value="" disabled selected>Choose Your Business</option>
+    <option>IT</option>
+    <option>Marketing</option>
+    <option>Retail</option>
+    <option>Education</option>
+    <option>Healthcare</option>
+    <option>Real Estate</option>
+    <option>Construction</option>
+    <option>Finance</option>
+    <option>Legal</option>
+    <option>Restaurants</option>
+    <option>Logistics</option>
+    <option>Beauty</option>
+    <option>Fitness</option>
+    <option>Consulting</option>
+    <option>Manufacturing</option>
+    <option>Agriculture</option>
+    <option>Automotive</option>
+    <option>Tourism</option>
+    <option>Art</option>
+    <option>Design</option>
+    <option>HR</option>
+    <option>Insurance</option>
+    <option>Science</option>
+    <option>Publishing</option>
+    <option>Events</option>
+    <option>Security</option>
+    <option>Cleaning</option>
+    <option>Repair</option>
+    <option>Pets</option>
+    <option>Kids</option>
+    <option>Sport</option>
+    <option>Entertainment</option>
+    <option>Jewelry</option>
+    <option>Fashion</option>
+    <option>Electronics</option>
+    <option>Furniture</option>
+    <option>Printing</option>
+    <option>Translation</option>
+    <option>Photography</option>
+    <option>Architecture</option>
+    <option>Advertising</option>
+    <option>Travel</option>
+    <option>Food</option>
+    <option>Nonprofit</option>
+    <option>Government</option>
+    <option>Energy</option>
+    <option>Mining</option>
+    <option>Aerospace</option>
+    <option>Marine</option>
+    <option>Telecommunication</option>
+    <option>Other</option>
+  </select>
+  <button type="submit">Apply Now</button>
+  <div style="font-size:0.95rem;color:#888;font-style:italic;margin-top:2px;">By submitting, you agree to our data processing policy.</div> 
+</form>
+
+  <div id="popup-success" style="display:none; text-align:center;">
+  <h3 style="font-size:2rem; color:#814BF6; font-weight:800; margin-bottom:32px;">Thank you!<br>Your request has been sent.</br></h3>
+  <button id="popup-thanks-btn" style="padding:18px 44px;font-size:1.2rem;border-radius:18px;background:#814BF6;color:#fff;border:none;cursor:pointer;">Thanks</button>
+</div>
+  </div>
+</div>
+  <script>
+// Закрытие по крестику внутри iframe
+const closeBtn = document.getElementById('popup-close-btn');
+if (closeBtn && window.parent) {
+  closeBtn.addEventListener('click', function() {
+    // Попробуем закрыть попап в родителе
+    if (window.parent && window.parent.document) {
+      const overlay = window.parent.document.getElementById('iframe-popup-overlay');
+      if (overlay) overlay.classList.remove('active');
+    }
+  });
+}
+// Обработка формы
+const form = document.getElementById('popup-form');
+if (form) {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Автоматический выбор адреса backend
+let backendUrl = '';
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+  backendUrl = 'http://localhost:5000/submit';
+} else {
+  backendUrl = window.location.origin + '/submit';
+}
+fetch(backendUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: document.getElementById('popup-name').value,
+        email: document.getElementById('popup-email').value,
+        business: document.getElementById('popup-business').value
+      })
+    })
+    .then(res => res.json())
+    .then(() => {
+      form.style.display = 'none';
+      document.querySelector('.popup-title').style.display = 'none';
+      document.querySelector('.popup-subtitle').style.display = 'none';
+      document.getElementById('popup-success').style.display = 'block';
+    })
+    .catch(() => {
+      alert('Ошибка отправки. Попробуйте ещё раз.');
+    });
+  });
+}
+// Кнопка Thanks закрывает попап
+const thanksBtn = document.getElementById('popup-thanks-btn');
+if (thanksBtn && window.parent) {
+  thanksBtn.addEventListener('click', function() {
+    if (window.parent && window.parent.document) {
+      const overlay = window.parent.document.getElementById('iframe-popup-overlay');
+      if (overlay) overlay.classList.remove('active');
+    }
+  });
+}
+</script>
+</body>
+</html>

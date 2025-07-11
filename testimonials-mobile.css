@@ -1,0 +1,92 @@
+/* Mobile-specific overrides for Testimonials section */
+
+/* Place after testimonials.css */
+
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 50px 0 44px 0;
+    }
+
+    .testimonials-badge {
+        font-size: 1rem;
+        padding: 6px 18px 6px 12px;
+        margin-bottom: 14px;
+    }
+
+    .testimonials-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        padding: 0 6vw;
+    }
+
+    .testimonial-card {
+        padding: 32px 22px 26px 22px;
+    }
+
+    .testimonial-quote-main {
+        font-size: 1.05rem;
+        margin-bottom: 16px;
+    }
+
+    .testimonial-quote-secondary {
+        font-size: 1rem;
+        margin-bottom: 14px;
+    }
+
+    .testimonial-author {
+        font-size: 1.05rem;
+    }
+
+    .testimonial-role {
+        font-size: 0.95rem;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+    .testimonials-title {
+        font-size: 26px;
+        margin-bottom: 28px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 4vw;
+    }
+
+    .testimonial-card {
+        padding: 22px 14px 20px 14px;
+        max-width: 92vw;
+        margin: 0 auto;
+    }
+
+    .testimonial-avatar {
+        width: 64px;
+        height: 64px;
+        font-size: 2.4rem;
+        margin-bottom: 16px;
+    }
+
+    .testimonial-quote-main {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .testimonial-quote-secondary {
+        font-size: 0.95rem;
+    }
+
+    .testimonial-author {
+        font-size: 1rem;
+    }
+
+    .testimonial-role {
+        font-size: 0.9rem;
+    }
+}

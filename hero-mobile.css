@@ -1,0 +1,114 @@
+/* Mobile-specific styles for Hero section */
+
+/*
+   Place this file AFTER hero.css in <head>
+   <link rel="stylesheet" href="hero.css" />
+   <link rel="stylesheet" href="hero-mobile.css" />
+*/
+
+@keyframes mobileFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 950px) {
+    /* Section wrapper adjustments */
+    .hero-section {
+        padding: 60px 16px 32px;
+        margin-top: 10px;
+    }
+
+    /* Limit max width of content for narrow screens */
+    .hero-content {
+        max-width: 90%;
+    }
+
+    /* Banner */
+    .hero-banner {
+        margin-bottom: 24px;
+        border-radius: 16px;
+        padding: 3px;
+    }
+    .hero-banner a {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    /* Heading */
+    .hero-section h1 {
+        font-size: 48px; /* Previously 58px for desktop */
+        line-height: 1.2;
+        margin-bottom: 16px;
+    }
+
+    /* Paragraph text */
+    .hero-section p {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+    .hero-buttons a {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    /* Floating icons */
+    .floating-icon {
+        width: 48px;
+        height: 48px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+    .floating-icon img {
+        width: 70%;
+        height: 70%;
+    }
+    /* Floating icon mobile animation & layering */
+    .floating-icon {
+        animation: mobileFloat 6s ease-in-out infinite;
+        z-index: 1; /* stays behind hero-content (which is z-index 2) */
+        pointer-events: none;
+    }
+    .icon-1 {
+        left: 5%;
+    }
+    .icon-2 {
+        right: 5%;
+    }
+}
+
+/* Even smaller phones */
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 48px 16px 24px;
+    }
+
+    .hero-section h1 {
+        font-size: 42px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    /* Request / primary button tweaks */
+    .hero-buttons {
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-buttons a {
+        width: auto;
+        min-width: 60%; /* ensures a nice size */
+        padding: 12px 20px;
+        font-size: 14px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

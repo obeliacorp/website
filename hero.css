@@ -1,0 +1,151 @@
+/* Стили для hero */
+
+/* --- Первый блок (Hero Section) --- */
+.hero-section {
+    position: relative;
+    padding: 90px 20px 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    min-height: auto;
+    margin-top: 40px;
+    perspective: 1000px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Анимированные иконки */
+.floating-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.floating-icon img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.icon-1 {
+    top: 30%;
+    left: 15%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.icon-2 {
+    top: 60%;
+    right: 10%;
+    animation: float 10s ease-in-out infinite 2s;
+}
+
+/* Анимации */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+    25% { transform: translateY(-20px) translateX(10px) rotate(3deg); }
+    50% { transform: translateY(10px) translateX(-10px) rotate(-3deg); }
+    75% { transform: translateY(-10px) translateX(15px) rotate(2deg); }
+}
+
+.hero-banner {
+    margin-bottom: 24px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 4px;
+    background-color: #fff;
+    display: inline-block;
+    backdrop-filter: blur(4px);
+}
+.hero-banner a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px 12px;
+}
+.hero-banner .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #814BF6;
+    border-radius: 50%;
+}
+.hero-banner .apply-now {
+    color: #666;
+    margin-left: 8px;
+    transition: color 0.2s;
+}
+.hero-banner:hover .apply-now {
+    color: #000;
+}
+
+.hero-section h1 {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 auto 20px;
+    letter-spacing: -0.02em;
+}
+
+.highlight-text {
+    background: -webkit-linear-gradient(100deg, #814BF6, #6255F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+.hero-buttons a {
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+.primary-btn {
+    background: linear-gradient(100deg, #814BF6, #6255F6);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(98, 85, 246, 0.35);
+}
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(98, 85, 246, 0.45);
+}

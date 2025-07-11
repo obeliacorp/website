@@ -1,0 +1,107 @@
+/* Mobile-specific styles for Video section */
+
+/* Place after video.css */
+
+@media (max-width: 768px) {
+    .video-section {
+        padding: 40px 16px 60px;
+    }
+
+    /* Section heading */
+    .video-section h2 {
+        font-size: 32px;
+        margin-bottom: 14px;
+    }
+    .video-section p {
+        font-size: 16px;
+        margin-bottom: 28px;
+    }
+
+    .video-container {
+        gap: 36px;
+    }
+
+    .video-wrapper {
+        border-radius: 16px;
+    }
+
+    .play-button {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .video-features {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .video-feature {
+        padding: 24px 20px;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .video-feature h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .video-feature p {
+        font-size: 14px;
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 480px) {
+    .video-section {
+        padding: 32px 12px 48px;
+    }
+
+    .video-section h2 {
+        font-size: 26px;
+    }
+
+    .video-section p {
+        font-size: 15px;
+    }
+
+    .video-container {
+        gap: 28px;
+    }
+
+    .play-button {
+        width: 52px;
+        height: 52px;
+        font-size: 18px;
+    }
+
+    .video-features {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    .video-feature {
+        padding: 20px 16px;
+    }
+
+    .feature-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .video-feature h3 {
+        font-size: 17px;
+    }
+
+    .video-feature p {
+        font-size: 13px;
+    }
+}

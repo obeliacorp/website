@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obelia Corp. - AI Workforce Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="video-section-mobile.css">
+    <link rel="stylesheet" href="faqs.css">
+    <link rel="stylesheet" href="faqs-mobile.css">
+    <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="testimonials-mobile.css">
+    <link rel="stylesheet" href="promo.css">
+    <link rel="stylesheet" href="promo-mobile.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="mobile-nav.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="hero-mobile.css">
+    <link rel="stylesheet" href="how-it-works.css">
+    <link rel="stylesheet" href="how-it-works-mobile.css">
+    <link rel="stylesheet" href="solutions.css">
+    <link rel="stylesheet" href="cases.css">
+    <link rel="stylesheet" href="integration.css">
+    <link rel="stylesheet" href="scale.css">
+    <link rel="stylesheet" href="scale-mobile.css">
+    <link rel="stylesheet" href="popup-modal.css">
+    <link rel="stylesheet" href="popup-modal-mobile.css">
+    <link rel="stylesheet" href="templates-section.css">
+    <link rel="stylesheet" href="templates-section-mobile.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="footer-mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Optional PWA / theme color for browsers -->
+    <meta name="msapplication-TileColor" content="#814BF6">
+    <meta name="theme-color" content="#814BF6">
+</head>
+
+
+<body>
+
+    <!-- ЭКРАН ЗАГРУЗКИ -->
+    <div id="loader-screen">
+        <div class="loader-spinner"></div>
+        <div class="loader-text" id="loader-text">Connecting</div>
+    </div>
+
+    <!-- ФОН САЙТА (ЛИНИИ) -->
+    <div class="site-background">
+        <div class="bg-line line-1"></div>
+        <div class="bg-line line-2"></div>
+    </div>
+
+    <!-- ШАПКА САЙТА -->
+    <header class="main-header">
+        <!-- Логотип -->
+        <div class="logo">
+            <a href="#">Obelia Corp.</a>
+        </div>
+        
+        <!-- Бургер для мобильной версии -->
+        <div class="burger" aria-label="Открыть меню" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <!-- Навигация -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="mobile-nav-header">
+                    <button class="mobile-nav-close" aria-label="Close menu">&times;</button>
+                    <a href="#" class="mobile-logo">Obelia Corp.</a>
+                </li>
+                <li class="nav-item solutions-menu">
+                    <a href="#solutions" class="nav-link">Solutions</a>
+                </li>
+                <li class="nav-item products-menu">
+                    <a href="#" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#faqs" class="nav-link">FAQs</a>
+                </li>
+                <!-- Мобильная кнопка Request Demo -->
+                <li class="nav-item mobile-demo-btn">
+                    <a href="#" class="nav-link request-demo-mobile">Request a demo</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Кнопка Request Demo -->
+        <div class="header-actions">
+            <a href="#" class="request-demo-btn">Request a demo</a>
+        </div>
+    </header>
+
+    <!-- ОСНОВНАЯ СЕКЦИЯ -->
+    <!-- ПЛАВУЮЩИЕ ИКОНКИ -->
+    <main>
+        <section class="hero-section">
+            <div class="floating-icon icon-1">
+                <img src="floating1.jpg" alt="Floating icon 1">
+            </div>
+            <div class="floating-icon icon-2">
+                <img src="floating2.jpg" alt="AI Workforce">
+            </div>
+
+            <!-- ЛИД-МАГНИТ -->
+            <div class="hero-content">
+                <div class="hero-banner">
+    <a href="#" id="open-iframe-popup">
+        <span class="dot"></span> Get Free AI-assistant <span class="apply-now">Apply Now <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+</div>
+                
+                <!-- ЗАГОЛОВОК ГЛАВНОЙ СЕКЦИИ -->
+                <h1>Build teams of <span class="highlight-text">AI agents</span> that deliver human-quality work</h1>
+                    <p>Ops teams can build and manage an entire AI workforce in one powerful visual platform.</p>
+
+                <!-- КНОПКИ ГЛАВНОЙ СЕКЦИИ -->
+                <div class="hero-buttons">
+                    <a href="#" class="primary-btn">Request a demo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ВТОРОЙ БЛОК -->   
+         <!-- ДЛЯ КОГО -->   
+        <div class="who-is-it-for-container">
+            <div class="who-is-it-for">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" fill="#4f46e5"/>
+                    <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" fill="#4f46e5"/>
+                </svg>
+                Who's it for
+            </div>
+            
+            
+            <a id="solutions"></a>
+            <section class="scale-section">
+                <div class="scale-image-container">
+                    <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/67a19bea3f3471d20b8a9374_scale-your-team.png" alt="Scale your team illustration" class="scale-image">
+                </div>
+                <div class="section-content">
+                        <a id="solutions"></a>
+                    
+                <h2>
+                Scale your <span id="typing-word" class="highlight-text"></span><span class="typing-cursor">|</span><br>
+                and free your team for higher impact work
+                </h2>
+
+                    <div class="feature-bullets-grid">
+                        <div class="feature-bullet-card">
+                            <div class="icon-circle"><i class="fa-solid fa-robot"></i></div>
+                            <h3>All-in-one multi-agent platform</h3>
+                            <p>A flexible, multi-agent platform built for any use case, across any industry.</p>
+                        </div>
+                        <div class="feature-bullet-card">
+                            <div class="icon-circle"><i class="fa-solid fa-gem"></i></div>
+                            <h3>Delivers human-quality work</h3>
+                            <p>Powerful, intelligent automation that matches the quality and precision of top human talent.</p>
+                        </div>
+                        <div class="feature-bullet-card">
+                            <div class="icon-circle"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3>Scalable for enterprise</h3>
+                            <p>Built to support large-scale operations and grow with your business as your needs evolve.</p>
+                        </div>
+                        <div class="feature-bullet-card">
+                            <div class="icon-circle"><i class="fa-solid fa-check-circle"></i></div>
+                            <h3>Built for business-critical tasks</h3>
+                            <p>Built for high-stakes tasks that drive real results, — intelligent automation, not just a bot.</p>
+                        </div>
+                        <div class="feature-bullet-card">
+                            <div class="icon-circle"><i class="fa-solid fa-sliders"></i></div>
+                            <h3>Works the way you do</h3>
+                            <p>Fully customizable workflows to seamlessly match how your business really operates.</p>
+                        </div>
+                        <div class="feature-bullet-card">
+                            <div class="icon-circle"><i class="fa-solid fa-users"></i></div>
+                            <h3>Active community & faster ROI</h3>
+                            <p>Tap into our active community to speed up deployment and start seeing results fast.</p>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="hero-buttons">
+                        <a href="#" class="primary-btn">Request a demo</a>
+                    </div> */ -->
+                </div>
+            </section>
+        </div>
+
+        <!--БЕГУШАЯ СТРОКА -->
+        <div class="logos-marquee-section">
+            <div class="logos-marquee">
+                <div class="logos-track">
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b03f4f4ac1ca2bf60840d_05_ashby.svg" alt="Partner Logo 1">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b040d7d528316eacfb5c3_07_wayflyer.svg" alt="Partner Logo 2">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b0446a3f2f7ed47520f9d_11_calrifai.svg" alt="Partner Logo 3">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b0451db8615a6693e1698_12_airwallex.svg" alt="Partner Logo 4">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b046f037f3d364ac40d07_14_intenseye.svg" alt="Partner Logo 5">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b047e02b143801d5c8338_15_thoughtspot.svg" alt="Partner Logo 6">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b048bcd56a1bfa6ecd6ce_16_autodesk.svg" alt="Partner Logo 7">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b049e0050fa873680c21d_17_freshworks.svg" alt="Partner Logo 8">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/67ad3ff2279f079c126e4ed9_14_qualidied.svg" alt="Partner Logo 9">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b03f4f4ac1ca2bf60840d_05_ashby.svg" alt="Partner Logo 1">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b040d7d528316eacfb5c3_07_wayflyer.svg" alt="Partner Logo 2">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b0446a3f2f7ed47520f9d_11_calrifai.svg" alt="Partner Logo 3">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b0451db8615a6693e1698_12_airwallex.svg" alt="Partner Logo 4">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b046f037f3d364ac40d07_14_intenseye.svg" alt="Partner Logo 5">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b047e02b143801d5c8338_15_thoughtspot.svg" alt="Partner Logo 6">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b048bcd56a1bfa6ecd6ce_16_autodesk.svg" alt="Partner Logo 7">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b049e0050fa873680c21d_17_freshworks.svg" alt="Partner Logo 8">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/67ad3ff2279f079c126e4ed9_14_qualidied.svg" alt="Partner Logo 9">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b03f4f4ac1ca2bf60840d_05_ashby.svg" alt="Partner Logo 1">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b040d7d528316eacfb5c3_07_wayflyer.svg" alt="Partner Logo 2">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b0446a3f2f7ed47520f9d_11_calrifai.svg" alt="Partner Logo 3">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b0451db8615a6693e1698_12_airwallex.svg" alt="Partner Logo 4">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b046f037f3d364ac40d07_14_intenseye.svg" alt="Partner Logo 5">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b047e02b143801d5c8338_15_thoughtspot.svg" alt="Partner Logo 6">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b048bcd56a1bfa6ecd6ce_16_autodesk.svg" alt="Partner Logo 7">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/679b049e0050fa873680c21d_17_freshworks.svg" alt="Partner Logo 8">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/67ad3ff2279f079c126e4ed9_14_qualidied.svg" alt="Partner Logo 9">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- КАК OBELIA РАБОТАЕТ -->
+        <section class="how-it-works">
+            <div class="section-header">
+                <h2>How Obelia <span class="highlight-text">transforms</span> your business</h2>
+                <p>Our platform makes it simple to deploy and manage AI agents at scale</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Define your workflow</h3>
+                    <p>Describe the tasks you need automated and the business logic they should follow.</p>
+                    <div class="step-icon"><i class="fas fa-project-diagram"></i></div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Assemble your AI team</h3>
+                    <p>Select from our library of specialized agents or create custom ones.</p>
+                    <div class="step-icon"><i class="fas fa-users-cog"></i></div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Deploy & monitor</h3>
+                    <p>Launch your AI workforce and monitor performance in real-time.</p>
+                    <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- YOUR GROWTH STARTS HERE -->
+        <section class="section-cta-animate" aria-label="Scroll to templates">
+            <div class="cta-content">
+              <span class="cta-text">Your growth starts here</span>
+              <span class="cta-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="cta-waves"></div>
+          </section>
+
+        <!-- КАРТОЧКИ КАТЕГОРИЙ -->
+          <section class="templates-section">
+            <h2><span class="highlight-text">Get started right now</span><br>with our expert-designed templates</h2>
+            <p>No need to start from scratch. Get inspired by 100+ templates and customize them to match the way you work.</p>
+            <div class="template-tags">
+              <span class="template-tag"><i class="fa-solid fa-flask"></i> Research</span>
+              <span class="template-tag"><i class="fa-solid fa-headset"></i> Support</span>
+              <span class="template-tag"><i class="fa-solid fa-chart-line"></i> Sales</span>
+              <span class="template-tag"><i class="fa-solid fa-gears"></i> Operations</span>
+              <span class="template-tag"><i class="fa-solid fa-bullhorn"></i> Marketing</span>
+            </div>
+            <div class="templates-scroll">
+                <div class="template-card">
+                    <div class="template-card-emoji">🏠</div>
+                    <div class="template-card-title">Real Estate</div>
+                    <div class="template-card-desc">Full automation of the customer interaction cycle, from the first contact to the preparation for the deal.</div>
+                    <a class="template-card-btn" href="real-estate/real-estate.html">View</a>
+                </div>
+                <div class="template-card">
+                    <div class="template-card-emoji">🏨</div>
+                    <div class="template-card-title">Hotel</div>
+                    <div class="template-card-desc">Fully automate guest interactions and optimize internal communications.</div>
+                    <a class="template-card-btn" href="#">View</a>
+                </div>
+                <div class="template-card">
+                    <div class="template-card-emoji">💳</div>
+                    <div class="template-card-title">FinTech</div>
+                    <div class="template-card-desc">Automation of routine customer interaction, data collection and monitoring of financial transactions.</div>
+                    <a class="template-card-btn" href="#">View</a>
+                </div>
+                <div class="template-card">
+                    <div class="template-card-emoji">🛒</div>
+                    <div class="template-card-title">eCommerce</div>
+                    <div class="template-card-desc">Automation of the full cycle of interaction with the buyer, from attraction to post-sale service.</div>
+                    <a class="template-card-btn" href="#">View</a>
+                </div>
+                <div class="template-card">
+                    <div class="template-card-emoji">🏥</div>
+                    <div class="template-card-title">Health</div>
+                    <div class="template-card-desc">Optimization of interaction with patients at all stages, freeing nursing staff from routine tasks.</div>
+                    <a class="template-card-btn" href="#">View</a>
+                </div>
+                <div class="template-card">
+                    <div class="template-card-emoji">🎓</div>
+                    <div class="template-card-title">Education</div>
+                    <div class="template-card-desc">Automate student interactions, personalize learning, and streamline administrative processes.</div>
+                    <a class="template-card-btn" href="#">View</a>
+                </div>
+                <div class="template-card">
+                  <div class="template-card-emoji">🚚</div>
+                  <div class="template-card-title">Logistics</div>
+                  <div class="template-card-desc">Streamline supply chain operations, shipment tracking, and warehouse communications with AI automation.</div>
+                  <a class="template-card-btn" href="#">View</a>
+                </div>
+                <div class="template-card">
+                  <div class="template-card-emoji">⚖️</div>
+                  <div class="template-card-title">Legal</div>
+                  <div class="template-card-desc">Automate document review, contract analysis, and client interactions to boost legal team efficiency.</div>
+                  <a class="template-card-btn" href="#">View</a>
+                </div>
+                <div class="template-card">
+                  <div class="template-card-emoji">👥</div>
+                  <div class="template-card-title">HR</div>
+                  <div class="template-card-desc">Enhance recruitment, onboarding, and employee support with intelligent HR assistants.</div>
+                  <a class="template-card-btn" href="#">View</a>
+                </div>
+            </div>
+        </section> 
+
+
+        <!-- ВИДЕО СЕКЦИЯ -->
+        <section class="video-section">
+            <div class="section-header">
+                <h2>See Obelia <span class="highlight-text">in action</span></h2>
+                <p>Watch how our AI agents transform business operations in real-world scenarios</p>
+            </div>
+                    
+            <div class="video-container">
+                <div class="video-wrapper">
+                            <!-- Placeholder for video - replace with your actual video embed code -->
+                <div class="video-placeholder">
+                <div class="play-button">
+                <i class="fas fa-play"></i>
+                </div>
+                <img src="https://cdn.prod.website-files.com/636cad09a1159553a45e8ba1/65e3f5bd99bab6d0ff49f3a8_avatar-1.svg" alt="Video thumbnail" class="video-thumbnail">
+                <iframe class="youtube-video" src="https://www.youtube.com/watch?v=z0qHq1_KBo4&list=RDz0qHq1_KBo4&start_radio=1&rv=0Zh73H6bcIk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                            <!-- You can replace the above with actual video embed code like:
+                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                            -->
+            </div>
+                        
+            <div class="video-features">
+                <div class="video-feature">
+                <div class="feature-icon">
+                <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Rapid Deployment</h3>
+                <p>Get your AI workforce up and running in minutes, not months</p>
+                </div>
+                <div class="video-feature">
+                <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Enterprise Security</h3>
+                <p>SOC 2 Type II compliant with military-grade encryption</p>
+                </div>
+                <div class="video-feature">
+                <div class="feature-icon">
+                <i class="fas fa-random"></i>
+                </div>
+                <h3>Flexible Integration</h3>
+                <p>Connect with 500+ tools via our API and native integrations</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FAQs -->
+        <a id="faqs"></a>
+    <div class="container">
+      <div class="faq-bg">
+        <section class="faq-section">
+      <h2>FAQs</h2>
+      <p>Can’t find the answer here? <a href="https://relevanceai.com/docs/get-started/introduction" target="_blank">Contact our support team.</a></p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-toggle" aria-label="Expand FAQ"><span class="faq-toggle-icon">+</span></button>
+          <div class="faq-question">What is an AI Workforce?</div>
+          <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);">An AI Workforce is a digital team you can hire to assist you in completing mundane and repetitive tasks. An AI Workforce consists of Agents equipped with Tools specific to your business operations crafted by domain experts. With Relevance, you will have the home of the AI Workforce with a single platform to create your Tools, equip them to Agents and deploy it to your organisation as a Multi-Agent System (MAS).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" aria-label="Expand FAQ"><span class="faq-toggle-icon">+</span></button>
+          <div class="faq-question">How do I create and use an agent?</div>
+          <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);">Create a new agent – give it a name, avatar, description, etc. This establishes its identity. Add AI Tools – Tools give your agent skills like the ability to convert a Youtube transcript into a blog. Relevance has prebuilt skills like making API calls, data processing, etc. Set triggers – triggers specify conditions when a skill should activate. For example, trigger a Tool when the agent receives a certain query. Talk to your agent – that's it! Start interacting with your agent using natural language. The agent will improve as it has more conversations.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" aria-label="Expand FAQ"><span class="faq-toggle-icon">+</span></button>
+          <div class="faq-question">What are AI Tools?</div>
+          <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);">AI Agents complete work, to complete work they need to be given tools. With AI Tools, you can build custom integrations, LLM prompt chains or traditional automations. Effortlessly harness the latest Large Language Models, connect to APIs, tap into pre-built third-party integrations, or execute custom code with the Tool Builder. Give AI Tools to AI Agents, run Tools in Bulk on your data, or use them yourself via an auto-generated app.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" aria-label="Expand FAQ"><span class="faq-toggle-icon">+</span></button>
+          <div class="faq-question">Which LLM providers do you support?</div>
+          <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);">We support OpenAI, Anthropic, Cohere, PaLM, and more. If you'd like to use a different provider, just let us know in our live chat and we'll add it to the list.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" aria-label="Expand FAQ"><span class="faq-toggle-icon">+</span></button>
+          <div class="faq-question">Is my data secure?</div>
+          <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);">Tools are ephemeral by nature, which means we don't store your input or your output. Datasets are stored in our platform which is SOC 2 Type II compliant.</div>
+        </div>
+    </section>
+      </div>
+    </div>
+
+    <!-- Отзывы клиентов -->
+    <section class="testimonials-section" aria-label="Отзывы клиентов">
+        <div class="testimonials-badge"><span class="testimonials-badge-icon">★</span> Testimonials</div>
+        <div class="section-header">
+          <h2 class="testimonials-title">Many businesses have already<br>
+  seen <span class="highlight-transformational">transformational</span> results</h2>
+          <p class="testimonials-subtitle">Join the growing number of teams empowering their workforce with AI.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">👩‍💼</div>
+            <div class="testimonial-content">
+              <div class="testimonial-text">“This platform helped us automate our workflows and scale faster than ever. The onboarding was seamless!”</div>
+              <div class="testimonial-meta">
+    <span class="testimonial-author">Anna Petrova</span>
+    <span class="testimonial-role">Product Manager <br> FinTech</br> </span>
+  </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">👨‍💻</div>
+            <div class="testimonial-content">
+              <div class="testimonial-text">“Intuitive, powerful, and reliable. We saved dozens of hours each month thanks to these tools.”</div>
+              <div class="testimonial-meta">
+    <span class="testimonial-author">Ivan Smirnov</span>
+    <span class="testimonial-role">CTO <br>SaaS Startup</br></span>
+  </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">👩‍🔬</div>
+            <div class="testimonial-content">
+              <div class="testimonial-text">“Support team is always there to help. Customization options are endless!”</div>
+              <div class="testimonial-meta">
+    <span class="testimonial-author">Elena Volkova</span>
+    <span class="testimonial-role">Lead Researcher, AI Lab</span>
+  </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">👨‍🎨</div>
+            <div class="testimonial-content">
+              <div class="testimonial-text">“A real game-changer for our marketing team. The templates are a huge time saver.”</div>
+              <div class="testimonial-meta">
+    <span class="testimonial-author">Dmitry Ivanov</span>
+    <span class="testimonial-role">Marketing Lead, Agency</span>
+  </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ПРОМО -->
+<section class="aiagent-promo-section">
+  <div class="aiagent-promo">
+    <div class="aiagent-promo-stars">
+      <svg class="aiagent-promo-star" data-pos="tl" width="32" height="32" viewBox="0 0 32 32" fill="currentColor"><polygon points="16,0 20,12 32,16 20,20 16,32 12,20 0,16 12,12"/></svg>
+      <svg class="aiagent-promo-star" data-pos="tr" width="32" height="32" viewBox="0 0 32 32" fill="currentColor"><polygon points="16,0 20,12 32,16 20,20 16,32 12,20 0,16 12,12"/></svg>
+      <svg class="aiagent-promo-star" data-pos="cl" width="32" height="32" viewBox="0 0 32 32" fill="currentColor"><polygon points="16,0 20,12 32,16 20,20 16,32 12,20 0,16 12,12"/></svg>
+      <svg class="aiagent-promo-star" data-pos="cr" width="32" height="32" viewBox="0 0 32 32" fill="currentColor"><polygon points="16,0 20,12 32,16 20,20 16,32 12,20 0,16 12,12"/></svg>
+      <svg class="aiagent-promo-star" data-pos="c" width="32" height="32" viewBox="0 0 32 32" fill="currentColor"><polygon points="16,0 20,12 32,16 20,20 16,32 12,20 0,16 12,12"/></svg>
+      <svg class="aiagent-promo-star" data-pos="l20t20" width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><polygon points="16,0 20,12 32,16 20,20 16,32 12,20 0,16 12,12"/></svg>
+      <svg class="aiagent-promo-star" data-pos="l80t20" width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><polygon points="16,0 20,12 32,16 20,20 16,32 12,20 0,16 12,12"/></svg>
+      <svg class="aiagent-promo-star" data-pos="l20b80" width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><polygon points="16,0 20,12 32,16 20,20 16,32 12,20 0,16 12,12"/></svg>
+      <svg class="aiagent-promo-star" data-pos="l80b80" width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><polygon points="16,0 20,12 32,16 20,20 16,32 12,20 0,16 12,12"/></svg>
+    </div>
+    <div class="aiagent-promo-inner">
+          <h2 class="aiagent-promo-title">
+            Free your team.<br>
+            <span class="aiagent-promo-highlight">Build <span class="brand-color">your first AI</span> agent today!</span>
+          </h2>
+          <p class="aiagent-promo-desc">
+            If you're exploring Relevance AI for the first time or discovering new features, we'll quickly <br>guide you to start doing great work immediately.</br>
+          </p>
+          <div class="aiagent-promo-actions">
+            <a href="#" id="open-iframe-popup" class="aiagent-promo-btn aiagent-promo-btn-primary">Get Free AI</a>
+            <a href="#" class="aiagent-promo-btn aiagent-promo-btn-secondary">Request Demo</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <link rel="stylesheet" href="footer.css">
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#">Real Estate</a></li>
+        <li><a href="#">Hotel</a></li>
+        <li><a href="#">FinTech</a></li>
+        <li><a href="#">eCommerce</a></li>
+        <li><a href="#">Health</a></li>
+        <li><a href="#">Education</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Stay updated</h4>
+      <div class="footer-newsletter">
+        <p>Subscribe to our newsletter for the latest updates and insights.</p>
+        <form class="footer-newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Twitter"><!-- twitter svg --><svg width="18" height="18" fill="currentColor"><path d="M18 3.5a7.2 7.2 0 0 1-2.1.6 3.6 3.6 0 0 0 1.6-2 7.2 7.2 0 0 1-2.3.9A3.6 3.6 0 0 0 8.8 7.1a10.2 10.2 0 0 1-7.4-3.7 3.6 3.6 0 0 0 1.1 4.8A3.6 3.6 0 0 1 .7 7.1v.1a3.6 3.6 0 0 0 2.9 3.5 3.6 3.6 0 0 1-1.6.1 3.6 3.6 0 0 0 3.4 2.5A7.2 7.2 0 0 1 0 15.3a10.2 10.2 0 0 0 5.5 1.6c6.6 0 10.2-5.5 10.2-10.2v-.5A7.3 7.3 0 0 0 18 3.5z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><!-- linkedin svg --><svg width="18" height="18" fill="currentColor"><path d="M4 6H1V17H4V6ZM2.5 4.5C3.3 4.5 4 3.8 4 3C4 2.2 3.3 1.5 2.5 1.5C1.7 1.5 1 2.2 1 3C1 3.8 1.7 4.5 2.5 4.5ZM17 17H14V12C14 10.9 13.1 10 12 10C10.9 10 10 10.9 10 12V17H7V6H10V7.5C10.6 6.6 11.7 6 13 6C15.2 6 17 7.8 17 10V17Z"/></svg></a>
+        <a href="#" aria-label="Facebook"><!-- facebook svg --><svg width="18" height="18" fill="currentColor"><path d="M16.5 1.5h-15A1.5 1.5 0 0 0 0 3v12a1.5 1.5 0 0 0 1.5 1.5h7.5v-5.2H7V9h2V7.7C9 5.9 10.1 5 11.6 5c.7 0 1.3 0 1.4.1v1.7h-1c-.7 0-.8.3-.8.8V9h2.2l-.3 2.3h-1.9V16.5h3A1.5 1.5 0 0 0 18 15V3a1.5 1.5 0 0 0-1.5-1.5z"/></svg></a>
+        <a href="#" aria-label="YouTube"><!-- youtube svg --><svg width="18" height="18" fill="currentColor"><path d="M17.5 5.3a2.2 2.2 0 0 0-1.6-1.6C14.5 3.3 9 3.3 9 3.3s-5.5 0-6.9.4a2.2 2.2 0 0 0-1.6 1.6C0 6.7 0 9 0 9s0 2.3.5 3.7a2.2 2.2 0 0 0 1.6 1.6c1.4.4 6.9.4 6.9.4s5.5 0 6.9-.4a2.2 2.2 0 0 0 1.6-1.6c.5-1.4.5-3.7.5-3.7s0-2.3-.5-3.7zM7.2 11.7V6.3l4.7 2.7-4.7 2.7z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2025 Obelia Corp. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+    <!-- МОДУЛЬНОЕ ОКНО POP-UP -->
+    <div id="iframe-popup-overlay" class="iframe-popup-overlay">
+        <div class="iframe-popup-modal">
+            <iframe src="popup-lead/popup.html" frameborder="0" class="iframe-popup-frame" title="AI Assistant Application Form"></iframe>
+        </div>
+    </div>
+
+    <!-- ПОДКЛЮЧЕНИЕ СКРИПТОВ -->
+    <script src="popup-modal.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

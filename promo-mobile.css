@@ -1,0 +1,77 @@
+/* Mobile-specific overrides for Promo (AI Agent) section */
+
+/* Place after promo.css */
+
+@media (max-width: 768px) {
+  .aiagent-promo-section {
+    padding: 48px 0 48px 0;
+  }
+
+  .aiagent-promo {
+    padding: 44px 0 36px 0;
+    border-radius: 20px;
+  }
+
+  .aiagent-promo-inner {
+    padding: 0 6vw;
+  }
+
+  .aiagent-promo-title {
+    font-size: 2rem; /* 32px */
+    margin-bottom: 16px;
+  }
+
+  .aiagent-promo-desc {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+
+  .aiagent-promo-actions {
+    gap: 14px;
+  }
+
+  .aiagent-promo-star {
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: 480px) {
+  .aiagent-promo-section {
+    padding: 36px 0 40px 0;
+  }
+
+  .aiagent-promo {
+    padding: 32px 0 28px 0;
+    border-radius: 16px;
+  }
+
+  .aiagent-promo-inner {
+    padding: 0 5vw;
+  }
+
+  .aiagent-promo-title {
+    font-size: 1.7rem; /* 27px */
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .aiagent-promo-desc {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  .aiagent-promo-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .aiagent-promo-btn {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .aiagent-promo-star {
+    display: none; /* hide floating stars on very small screens */
+  }
+}

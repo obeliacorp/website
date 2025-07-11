@@ -1,0 +1,240 @@
+/* Стили для блока "Who's it for" */
+.who-is-it-for-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.who-is-it-for {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f3f4f6;
+    border-radius: 9999px;
+    padding: 6px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.who-is-it-for svg {
+    margin-right: 8px;
+}
+
+
+/* -------------------------------------- */
+/* NEW STYLES FOR SCALE YOUR TEAM SECTION */
+/* -------------------------------------- */
+
+.scale-section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 100vw;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.scale-section h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.scale-section h2:nth-of-type(2) {
+    font-size: 30px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.typing-cursor {
+    display: inline-block;
+    animation: blink 0.7s step-end infinite;
+    font-weight: 300;
+    margin-left: -5px;
+}
+
+@keyframes blink {
+    from, to { color: transparent }
+    50% { color: #000 }
+}
+
+.scale-image-container {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.scale-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.feature-bullets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, 1fr)); 
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.feature-bullet-card {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    min-height: 180px; 
+}
+
+.feature-bullet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(98, 85, 246, 0.1);
+    border-color: rgba(98, 85, 246, 0.2); 
+}
+
+.feature-bullet-card:hover .icon-circle i {
+    transform: scale(1.1); 
+}
+
+/* Градиент для некоторых иконок для разнообразия */
+.feature-bullet-card:nth-child(1) .icon-circle i,
+.feature-bullet-card:nth-child(2) .icon-circle i,
+.feature-bullet-card:nth-child(3) .icon-circle i,
+.feature-bullet-card:nth-child(4) .icon-circle i,
+.feature-bullet-card:nth-child(5) .icon-circle i,
+.feature-bullet-card:nth-child(6) .icon-circle i {
+    background: linear-gradient(135deg, #814BF6, #6255F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1200px) {
+    .feature-bullets-grid {
+        grid-template-columns: repeat(2, 350px);
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 800px) {
+    .feature-bullets-grid {
+        grid-template-columns: 350px;
+        max-width: 400px;
+    }
+    
+    .feature-bullet-card {
+        min-height: auto;
+    }
+}
+
+/* Мобильная адаптация для телефонов */
+@media (max-width: 768px) {
+    .scale-section {
+        padding: 40px 15px;
+        text-align: center;
+    }
+    
+    .scale-section h2 {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    
+    .scale-section h2:nth-of-type(2) {
+        font-size: 24px;
+        margin-top: 5px;
+    }
+    
+    .scale-image-container {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .scale-image {
+        max-width: 100%;
+        border-radius: 12px;
+    }
+    
+    .feature-bullets-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 40px;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .feature-bullet-card {
+        text-align: center;
+        align-items: center;
+        padding: 25px 20px;
+        min-height: auto;
+        margin: 0 auto;
+        max-width: 320px;
+    }
+    
+    .feature-bullet-card h3 {
+        font-size: 18px;
+        margin: 15px 0 10px 0;
+        text-align: center;
+    }
+    
+    .feature-bullet-card p {
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .icon-circle {
+        margin-bottom: 10px;
+    }
+    
+    .icon-circle i {
+        font-size: 24px;
+    }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+    .scale-section {
+        padding: 30px 10px;
+    }
+    
+    .scale-section h2 {
+        font-size: 28px;
+    }
+    
+    .scale-section h2:nth-of-type(2) {
+        font-size: 20px;
+    }
+    
+    .feature-bullet-card {
+        padding: 20px 15px;
+        max-width: 280px;
+    }
+    
+    .feature-bullet-card h3 {
+        font-size: 16px;
+    }
+    
+    .feature-bullet-card p {
+        font-size: 13px;
+    }
+    
+    .icon-circle i {
+        font-size: 20px;
+    }
+}
